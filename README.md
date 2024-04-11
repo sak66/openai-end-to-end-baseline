@@ -120,6 +120,9 @@ az account set --subscription xxxxx
     },
     "appGatewayListenerCertificate": {
       "value": "[base64 cert data from $APP_GATEWAY_LISTENER_CERTIFICATE_APPSERV_BASELINE]"
+    },
+    "jumpBoxAdminPassword": {
+      "value": "[a valid passord for the jumpBox]"
     }
   }
 }
