@@ -105,7 +105,7 @@ az account set --subscription xxxxx
      echo APP_GATEWAY_LISTENER_CERTIFICATE_APPSERV_BASELINE: $APP_GATEWAY_LISTENER_CERTIFICATE_APPSERV_BASELINE
      ```
 
-1. Update the infra-as-code/parameters file
+1. Update the infra-as-code/bicep/parameters.json file
 
 ```json
 {
@@ -128,7 +128,7 @@ az account set --subscription xxxxx
 1. Run the following command to create a resource group and deploy the infrastructure. Make sure:
 
    - The location you choose [supports availability zones](https://learn.microsoft.com/azure/reliability/availability-zones-service-support)
-   - The BASE_NAME contains only lowercase letters and is between 6 and 8 characters. Most resource names will include this text.
+   - The BASE_NAME contains only lowercase letters and is between 6 and 8 characters. The BASE_NAME represents a descriptive and meaningful identifier for the specific resource.  (imagine you’re creating a resource group for a production SharePoint workload in the West US region. Here’s how you might structure the resource group name: Resource Group Name: rg-sharepoint-prod-westus-001, BASE_NAME Component: In this example, the BASE_NAME is sharepoint)
    - You choose a valid resource group name.
    - You will be prompted for an admin password for the jump box; it must satisfy the [complexity requirements for Windows](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements).
 
